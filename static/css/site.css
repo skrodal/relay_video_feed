@@ -1,0 +1,209 @@
+body{
+    background: #E5E0DC;
+
+}
+
+#header {
+    width:100%;
+    /* height: 40px; */
+    height: 0;
+    /* Blue
+    background-image: -ms-linear-gradient(top, #4B80AA 0%, #245783 100%);
+    background-image: -moz-linear-gradient(top, #4B80AA 0%, #245783 100%);
+    background-image: -o-linear-gradient(top, #4B80AA 0%, #245783 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4B80AA), color-stop(1, #245783));
+    background-image: -webkit-linear-gradient(top, #4B80AA 0%, #245783 100%);
+    background-image: linear-gradient(to bottom, #4B80AA 0%, #245783 100%);
+    */
+    /* Grey
+    background-image: linear-gradient(bottom, rgb(20,20,20) 31%, rgb(51,51,51) 66%);
+    background-image: -o-linear-gradient(bottom, rgb(20,20,20) 31%, rgb(51,51,51) 66%);
+    background-image: -moz-linear-gradient(bottom, rgb(20,20,20) 31%, rgb(51,51,51) 66%);
+    background-image: -webkit-linear-gradient(bottom, rgb(20,20,20) 31%, rgb(51,51,51) 66%);
+    background-image: -ms-linear-gradient(bottom, rgb(20,20,20) 31%, rgb(51,51,51) 66%);
+    */
+    background: transparent;
+}
+
+#main-header {
+    /* margin-top:-40px; */
+    background: #fff;
+    box-shadow: 1px 1px 20px #333;
+}
+
+#main-content {
+    padding: 20px;
+    margin-top:0px;
+    margin-bottom: 40px;
+    background: #fff;
+    min-height: 300px;
+    box-shadow: 1px 1px 20px #333;
+    -webkit-border-radius: 0 0 4px 4px;
+}
+
+h2 {
+    color:#111;
+    line-height: 30px;
+}
+
+a {
+    color:#FF530D;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail-clip img {
+    width: 200px;
+    height: 130px;
+    position: relative;
+    left: 0;
+    display: block;
+}
+
+/* --- media queries ------------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1600px)
+{
+}
+
+@media screen and (max-width: 1400px)
+{
+}
+
+@media screen and (max-width: 1200px)
+{
+}
+
+@media screen and (max-width: 1024px)
+{
+}
+
+@media screen and (max-width: 1000px)
+{
+}
+
+@media screen and (max-width: 800px)
+{
+}
+
+@media screen and (max-width: 768px)
+{
+    .thumbnail-clip img {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    /* to avoid the adjustment of fonts on iOS devices you should keep this line */
+    * { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+}
+
+@media screen and (max-width: 600px)
+{
+}
+
+@media screen and (max-width: 480px)
+{
+    body {
+        padding:0;
+    }
+    .thumbnail-clip img {
+        height: 130px;
+    }
+    #main-content {
+        box-shadow: none;
+    }
+    #main-header {
+        box-shadow: none;
+    }
+    h2 {
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+}
+
+@media screen and (max-width: 320px)
+{
+    .thumbnail-clip img {
+        width: 280px;
+        height: 157px;
+    }
+/*
+    iframe {
+        width:280px;
+        height:157px;
+    }
+*/
+    h2 {
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 240px)
+{
+    .thumbnail-clip img {
+        width:200px;
+        height: 112px;
+    }
+/*
+    iframe {
+        width:200px;
+        height:112px;
+    }
+*/
+    h2 {
+        font-size:1.3em;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/* --- iPad --------------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait)
+{
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape)
+{
+}
+
+
+/* --- iPhone 4(S) retina ------------------------------------------------------------------------------------------- */
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+screen and (min-device-pixel-ratio: 1.5)
+{
+}
+
+
+/* --- iPhone ------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 1),
+screen and (max-device-width: 640px) and (device-pixel-ratio: 1)
+{
+}

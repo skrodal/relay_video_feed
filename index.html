@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="static/img/ios-icon.png" />
+    <link href='static/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/site.css' rel='stylesheet' type='text/css'>
+    <script src="static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="static/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="settings.js" charset="utf-8"></script>
+    <script src="static/js/site.js" charset="utf-8"></script>
+    <script src="static/js/analytics.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span8">
+            <div id="main-header">
+                <img src="static/img/header.png">
+            </div>
+            <div id="main-content">
+                <div id="live-container"></div>
+                <div id="video-progress"><img src="static/img/spinner.gif" /> <strong>Loading archived videos..</strong></div>
+                <div id="videos" class="hide"></div>
+            </div>
+        </div>
+        <div class="span4">
+            <br>
+            <ul class="nav nav-tabs">
+                <li id="social-tab" class="active"><a id="hashtag" href="#social" data-toggle="tab"><i class="icon-user"></i> Social</a></li>
+                <li id="comment-tab"><a href="#comments" data-toggle="tab"><i class="icon-comment"></i> Comments</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="social"></div>
+                <div class="tab-pane" id="comments">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        if(SETTINGS.comments)
+                        {
+                            var disqus_shortname = SETTINGS.disqus_shortname;
+                            var disqus_developer = SETTINGS.dev_mode;
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        }
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript'>
+if (SETTINGS.vodprovider === "vimeo") {
+    $('head').append('<script src="static/js/plugins/vod/vimeo.js" type="text/javascript" ><\/script>');
+} else if (SETTINGS.vodprovider === "youtube") {
+    $('head').append('<script src="static/js/plugins/vod/youtube.js" type="text/javascript" ><\/script>');
+} else if (SETTINGS.vodprovider === "mds") {
+    $('head').append('<script src="static/js/plugins/vod/mds.js" type="text/javascript" ><\/script>');
+} else if (SETTINGS.vodprovider === "relay") {
+    $('head').append('<script src="static/js/plugins/vod/relay.js" type="text/javascript" ><\/script>');
+}
+</script>
+</body>
+</html>
